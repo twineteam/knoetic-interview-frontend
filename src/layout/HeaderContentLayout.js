@@ -40,7 +40,6 @@ const HeaderContentLayout = ({ children }) => {
           </Menu.Item>
         </Menu>
       </Header>
-      {/* 1. How to make this full height without vertical scrollbar  */}
       <Content
         style={{ padding: 50, minHeight: "calc(100vh - 64px)", height: "100%" }}
       >
