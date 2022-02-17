@@ -1,4 +1,4 @@
-# Twine frontend interview repository
+# Knoetic frontend interview repository
 
 ## Getting started
 
