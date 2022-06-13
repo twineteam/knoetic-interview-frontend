@@ -10,6 +10,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .page-wrapper {
   width: 100vw;
   height: 100vh;
@@ -21,3 +27,39 @@ code {
   padding: 48px;
   height: 100%;
 }
+
+.ant-layout-sider-dark,
+.ant-menu,
+.ant-layout-header {
+  background: #b2acfa !important;
+  border-top: 1px solid #948de7 !important;
+  border-bottom: 1px solid #948de7 !important;
+  border-left: 1px solid #948de7 !important;
+  border-right: 1px solid #948de7 !important;
+}
+
+.ant-menu > .ant-menu-item:hover,
+.ant-menu > .ant-menu-submenu:hover {
+  background-color: #8ad9d1 !important;
+  border-left: 1.2px solid #8dd7cf !important;
+  border-right: 1.2px solid #8dd7cf !important;
+}
+
+.ant-menu > .ant-menu-item,
+.ant-menu > .ant-menu-item-active,
+.ant-menu > .ant-menu-submenu-active,
+.ant-menu > .ant-menu-item-open,
+.ant-menu > .ant-menu-submenu-open,
+.ant-menu > .ant-menu-submenu-selected 
+.ant-menu > .ant-menu-item-selected {
+  background-color: #8dd7cf !important;
+  border-left: 1.2px solid #699c96 !important;
+  border-right: 1.2px solid #699c96 !important;
+}
+
+.ant-card,
+.ant-card > .ant-card-actions {
+  background: transparent;
+  border: 0px;
+}
+
