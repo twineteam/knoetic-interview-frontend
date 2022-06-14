@@ -1,17 +1,15 @@
 import { Layout, Menu } from "antd";
 import { useHistory, useLocation } from "react-router-dom";
-import CounterListSider from "../components/CounterListSider";
 import routes from "../routes";
 
 const { Header, Content } = Layout;
 
-const HeaderContentLayout = ({ children }) => {
+const HeaderContentLayout = ({ counterListSider, attritionTimeline }) => {
   const history = useHistory();
   const location = useLocation();
 
   return (
     <Layout>
-      {/* Header menu */}
       <Header>
         <Menu theme="dark" mode="horizontal">
           <Menu.Item key="polls" onClick={() => history.push(routes.cpoHqPolls)}>
@@ -37,18 +35,20 @@ const HeaderContentLayout = ({ children }) => {
         </Menu>
       </Header>
       <Layout>
-        {/* Sider menu */}
-        <CounterListSider 
-          showCounters={true}
-        />
-        {/* Content display (see: ../pages) */}
+        { 
+          (location.pathname === '/cpo-hq-polls' || location.key === '/cpo-hq-forum') 
+          && counterListSider 
+        }
         <Content style={{
             padding: 50,
             minHeight: "calc(100vh - 64px)",
             height: "100%",
           }}
         >
-          {children}
+          { 
+            (location.pathname === '/dashboard') 
+            && attritionTimeline
+          }
         </Content>
       </Layout>
     </Layout>

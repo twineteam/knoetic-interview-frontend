@@ -7,6 +7,9 @@ import DashboardView from "pages/DashboardView";
 import CpoHqForumView from "pages/CpoHqForumView";
 import CpoHqPollsView from "pages/CpoHqPollsView";
 
+import CounterListSider from "components/CounterListSider";
+import AttritionTimeline from "components/AttritionTimeline";
+
 import routes from "routes";
 
 const pages = [
@@ -19,7 +22,7 @@ const pages = [
 const App = () => {
   return (
     <div className="page-wrapper" style={{ backgroundColor: "ghostwhite" }}>
-      <HeaderContentLayout>
+      <HeaderContentLayout counterListSider={<CounterListSider />} attritionTimeline={<AttritionTimeline/>}>
         <Switch>
           {pages.map(({ exact, path, component: Component }) => {
             return (

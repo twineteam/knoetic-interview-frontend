@@ -6,13 +6,9 @@ import { useCounterList } from "../hooks/useCounterList";
 
 const { Sider } = Layout;
 
-const CounterListSider = ({ showCounters }) => {
+const CounterListSider = () => {
   const { counterList, actions } = useCounterList();
   
-  if (!showCounters) {
-      return <></>
-  }
-
   return (
     <Sider>
       <section className="sider-div">
